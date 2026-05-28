@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
                 var showSplash by remember { mutableStateOf(true) }
 
                 LaunchedEffect(Unit) {
-                    delay(5000) // Show splash for 5 seconds
+                    delay(2000) // Show splash for 2 seconds
                     showSplash = false
                 }
 
@@ -59,7 +59,8 @@ fun SplashScreen() {
             painter = painterResource(id = R.drawable.splash),
             contentDescription = "Splash Screen",
             modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Fit
+            contentScale = ContentScale.FillBounds
+
         )
     }
 }
